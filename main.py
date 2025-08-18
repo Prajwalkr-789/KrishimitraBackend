@@ -14,7 +14,7 @@ import re
 # Create uploads directory if needed
 
 app = Flask(__name__)
-CORS(app) 
+CORS(app , origins=["https://krishimitra-green.vercel.app"] ) 
 
 # UPLOADS_DIR = "uploads"
 # os.makedirs(UPLOADS_DIR, exist_ok=True)
