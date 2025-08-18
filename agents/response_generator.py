@@ -7,27 +7,41 @@ def generate_response(state: AgentState) -> AgentState:
     crop_response = ""
     disease_response = ""
     
-    # Generate crop recommendation response if available
+    # Generate crop recommendation response if availabl
     if state.get("crop_recommendations"):
         crop_list = "\n".join(
             f"- {crop['name']} ({crop['sci_name']})" 
             for crop in state["crop_recommendations"]
         )
+
+        soil_ph = state.get("soil_ph", "Not specified")
+        rainfall = state.get("rainfall", "Not specified")
+        temperature = state.get("temperature", "Not specified")
+        soil_type = state.get("soil_type", "Not specified")
+        season = state.get("season", "Not specified")
+        location = state.get("location", "India")
+        language = state.get("language", "english").lower()
+        user_query = state.get("user_query", "No query provided")
+
+
+        crop_prompt = f"""You are an agricultural advisor in {location}
+The user asked: "{user_query}"
+
+If the query is about crop recommendations, ONLY use the provided crop list: {crop_list} 
+and recommend crops based on:
+- Soil pH: {soil_ph}
+- Rainfall: {rainfall} mm
+- Temperature: {temperature} °C
+- Soil Type: {soil_type}
+- Season: {season}
+
+Otherwise, answer the user query directly.
+
+Always respond in {language}.
+Do not add greetings, disclaimers, or extra text. 
+Only provide the advice or crop recommendations with practical planting tips if relevant."""
         
-        crop_prompt = f"""
-        You are an agricultural advisor in {state.get('location', 'India')}. 
-        Recommend crops based on these parameters:
-        - Soil pH: {state.get('soil_ph', 'Not specified')}
-        - Rainfall: {state.get('rainfall', 'Not specified')} mm
-        - Temperature: {state.get('temperature', 'Not specified')}°C
-        - Soil Type: {state.get('soil_type', 'Not specified')}
-        - Season: {state.get('season', 'Not specified')}
-        
-        Recommended crops:
-        {crop_list}
-        
-        Provide planting tips in {state.get('language', 'english')}.
-        """
+       
         crop_response = get_gemini_response(crop_prompt)
     
     # Generate disease response if available

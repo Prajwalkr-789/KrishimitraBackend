@@ -1,9 +1,9 @@
 # services/gemini_vision.py
-import google.generativeai as genai
+import google.generativeai as genai #type: ignore
 import os
 import json
 from dotenv import load_dotenv
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
+# from google.generativeai.types import HarmCategory, HarmBlockThreshold # type: ignore
 
 # Load environment variables
 load_dotenv()
@@ -47,12 +47,12 @@ def analyze_disease_image(image_path: str) -> dict:
         # Generate content
         response = model.generate_content(
             [prompt, {"mime_type": "image/jpeg", "data": image_data}],
-            safety_settings={
-                HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-                HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-                HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-                HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-            }
+            # safety_settings={
+            #     HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+            #     HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+            #     HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+            #     HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+            # }
         )
         
         # Extract JSON from response

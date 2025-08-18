@@ -1,0 +1,139 @@
+[
+  {
+  "name": "Subsidy for Medium Scale Ornamental Fish Rearing Unit (Fresh Water)",
+  "program": "Pradhan Mantri Matsya Sampada Yojana (PMMSY)",
+  "department": "Fisheries Department, Government of Haryana",
+  "type": "Centrally Sponsored Scheme",
+  "description": "Financial assistance in the form of a subsidy is provided to eligible beneficiaries for setting up infrastructure such as sheds, breeding units, and rearing and culture tanks for ornamental fish. The assistance will be provided to beneficiaries who own a minimum of 150 square meters of vacant land with an adequate fresh water facility.",
+  "benefits": "Project Cost: ₹8,00,000/- per unit. Subsidy limited to 40% of the project cost for General Category applicant. Subsidy limited to 60% of the project cost for Scheduled Caste (SC)/Women beneficiaries.",
+  "eligibility": "The applicant should be a resident of Haryana. | The applicant should possess a valid Parivar Pehchan Patra (Family ID). | The applicant should have at least 150 square meters of vacant land with adequate water supply. | The applicant should either own the land or possess a registered lease deed valid for at least 7 years.",
+  "application_process": "Mode: Online, via CSCs. Registration Process: Visit the Official Portal: Antyodaya-SARAL Portal. For registration, click on “New User/Register Here” and fill in all the mandatory details i.e. Name, Email ID, Mobile Number & password. Click on ‘Submit’. Verify the OTP received in the provided Email and Mobile Number. Alternatively,",
+  "contact_helpline": "0172-3968400",
+  "contact_email": "saral.haryana@gov.in",
+  "documents_required": [
+    "Agreement Letter-1: Agreement letter between the beneficiary and the department",
+    "Birth Certificate: Voter ID Card/Date of Birth Certificate/Aadhaar Card/Class 10th Certificate",
+    "Caste Certificate: Caste certificate issued by a First-Class Magistrate (Tehsildar)",
+    "Fisheries Training Certificate of the Applicant",
+    "Land Records: Land records from the Tehsil (land registry, copy of Aksasra Fard) or registered lease deed",
+    "Bill/Receipt/Voucher",
+    "Photograph of the beneficiary with the unit",
+    "Bank account and PAN card details",
+    "Detailed Project Report (DPR)/Self-Contained Proposal (SCP) as per the guidelines issued under the Centrally Sponsored Scheme PMMSY"
+  ],
+  "source": "Scheme Details",
+  "website_link": "https://saralharyana.gov.in/"
+},
+{
+  "name": "Pradhan Mantri Kisan Samman Nidhi (PM-Kisan)",
+  "program": "Pradhan Mantri Kisan Samman Nidhi",
+  "department": "Ministry of Agriculture and Farmers Welfare, Government of India",
+  "type": "Central Sector Scheme",
+  "description": "The PM-Kisan scheme provides income support of ₹6,000 per year to all small and marginal farmer families across the country, payable in three equal installments of ₹2,000 each.",
+  "benefits": "Income support of ₹6,000 per year, credited directly to the bank account of eligible farmers in three installments of ₹2,000 each.",
+  "eligibility": "All small and marginal farmer families owning cultivable land. Farmers must be registered and have valid Aadhaar, bank account, and land ownership documents.",
+  "application_process": "Mode: Online / CSCs (Common Service Centers). Farmers can register via the PM-Kisan portal or their nearest CSC. Verification is done by local authorities.",
+  "contact_helpline": "1800-180-1551",
+  "contact_email": "pmkisan-cell@nic.in",
+  "documents_required": [
+    "Aadhaar Card of the farmer",
+    "Bank account details",
+    "Land ownership documents (Patta or other proof of ownership)",
+    "Identity proof (Voter ID/Driving License/Passport)"
+  ],
+  "source": "Scheme Details",
+  "website": "https://www.pmkisan.gov.in/"
+},
+{
+  "name": "Pradhan Mantri Adarsh Gram Yojana",
+  "program": "PMAGY",
+  "department": "Ministry of Social Justice & Empowerment",
+  "type": "Centrally Sponsored Scheme",
+  "description": "Aims at integrated development of Scheduled Castes majority villages by converging central and state schemes, addressing socio-economic deficits across key sectors.",
+  "benefits": "Convergent infrastructure & services across 10 domains; ₹20 lakh/village gap-filling + ₹1 lakh/village administrative support (new); ₹9.5 lakh + ₹0.5 lakh for additional rounds",
+  "eligibility": "Villages with >50% SC population; selection based on SC concentration and population ≥ 500; initial 1,000 pilot villages (TN, RJ, BI, HP, AS); later expanded to ~44,000 by 2024-25",
+  "application_process": "Villages are selected by State/UT governments via need-assessment; Village Development Plans (VDP) are generated and approved by Gram Sabha & District Level PACC; funds released post-approval",
+  "contact_helpline": [],
+  "contact_email": [],
+  "documentation_required": "Need-assessment reports; State/District action plans; VDPs; utilization certificates",
+  "source": [
+    "PMAGY official website",
+    "Vikaspedia overview",
+    "Revised guidelines PDF (2019)"
+  ],
+  "actual_website_link": "https://pmagy.gov.in"
+},
+{
+  "name": "Per Drop More Crop (PMKSY-PDMC)",
+  "program": "PMKSY-PDMC",
+  "department": "Department of Agriculture & Farmers’ Welfare; implemented via PMKSY mission",
+  "type": "Centrally Sponsored Scheme (Micro-irrigation component of PMKSY)",
+  "description": "Promotes efficient water use at farm level through subsidies for micro-irrigation systems (drip & sprinkler), aiming to enhance water-use efficiency and crop yield.",
+  "benefits": "60% central subsidy (90:10 sharing in NE/Himalayan UTs, 100% for UTs); interest subvention via Micro Irrigation Fund; covers drip & sprinkler systems, water-lift devices, capacity training.",
+  "eligibility": "Farmer beneficiaries across India; state-wise Annual Action Plan; funding sharing: 60:40 (central:state), 90:10 for NE/Himalayan states, 100% for Union Territories",
+  "application_process": "Farmers apply via State-level Sanctioning Committees (SLSC) following Annual Action Plan. Systems installed by approved agencies; DBT-based release after verification and approval.",
+  "contact_helpline": [],
+  "contact_email": [],
+  "documentation_required": ["Application as per AAP", "Land ownership proof", "Bank account details", "Installation certificate by implementing agency"],
+  "source": [
+    "PIB Press Release Dec 2021",
+    "Operational guidelines & state DA websites",
+    "PMKSY official site & NABARD announcements"
+  ],
+  "actual_website_link": "https://www.myscheme.gov.in/schemes/pmksypdmc"
+},{
+  "name": "Assistance to Artisans and Producers for Development (AAPD)",
+  "program": "Assistance to Artisans and Producers for Development (AAPD)",
+  "department": "Ministry of Textiles, Government of India",
+  "type": "Centrally Sponsored Scheme",
+  "description": "Financial and technical assistance is provided to eligible artisans and producers to promote traditional crafts, improve production, and enhance market access.",
+  "benefits": "Financial assistance for procurement of raw materials, skill development programs, and marketing support. Assistance covers up to 50% of project cost depending on eligibility.",
+  "eligibility": "The applicant should be an artisan, craftsperson, or producer registered under the respective state craft board or cooperative society. Applicants must be Indian citizens.",
+  "application_process": "Mode: Online and offline through designated CSCs or State Artisan Welfare Boards. Registration Process: Visit the official website or local offices for registration and application submission.",
+  "contact_helpline": "1800-123-4567",
+  "contact_email": "aapd.helpdesk@gov.in",
+  "documents_required": [
+    "Identity Proof (Aadhaar Card, Voter ID, or Passport)",
+    "Address Proof (Ration Card, Utility Bill, or Aadhaar)",
+    "Bank Account Details",
+    "Photograph of the Applicant",
+    "Proof of Artisanship (Certificate from State Artisan Board or Cooperative Society)",
+    "Project Proposal detailing the planned activities and fund utilization"
+  ],
+  "source": "Scheme Details",
+  "website": "https://www.myscheme.gov.in/schemes/aapd"
+},{
+  "name": "Pradhan Mantri Matsya Sampada Yojana – Refrigerated Vehicles (SFRV)",
+  "program": "PMMSY – SFRV",
+  "department": "Department of Fisheries, Ministry of Fisheries, Animal Husbandry & Dairying",
+  "type": "Central Sector Scheme (Sub-component: Post-Harvest Infrastructure)",
+  "description": "Provides financial assistance to fishers/cooperative societies for purchasing refrigerated vehicles to transport and preserve fish quality during post-harvest operations.",
+  "benefits": "Subsidy up to specified % of vehicle cost (limits vary by category); grants help maintain cold-chain, reduce spoilage, enhance farmers’ income",
+  "eligibility": "Individual fishers, fish farmer producer organizations (FFPOs), cooperatives, SHGs engaged in fisheries post-harvest transport",
+  "application_process": "Applicants apply through State Directorate of Fisheries or designated implementing agencies; eligibility verified; assistance sanctioned and released post-verification of purchase",
+  "contact_helpline": [],
+  "contact_email": [],
+  "documentation_required": ["Identity proof", "Fisher registration certificate", "Vehicle purchase invoice", "Bank account details"],
+  "source": ["myscheme.gov.in scheme page content (refrigerated vehicles under PMMSY)"],
+  "actual_website_link": "https://www.myscheme.gov.in/schemes/sfrv"
+},
+{
+  "name": "Pradhan Mantri Matsya Kisan Samridhi Sah-Yojana – Component 1B",
+  "program": "PMMKSSY – Component 1B",
+  "department": "Department of Fisheries, Ministry of Fisheries, Animal Husbandry & Dairying",
+  "type": "Central Sector Sub-scheme under PMMSY",
+  "description": "Provides one-time financial incentive for aquaculture insurance premium to fish farmers/fish farmers/fish workers and institutions to encourage coverage under institutional credit.",
+  "benefits": "40% subsidy on insurance premium (capped at ₹25,000/ha; max ₹100,000 per farmer for up to 4 ha; ₹1 lakh for intensive systems up to 1,800 m³). Additional 10% for SC/ST/women beneficiaries",
+  "eligibility": "Fish farmers, fish workers, fish vendors, aquaculture enterprises, FFPOs, cooperatives etc., who have taken institutional credit and purchased aquaculture insurance",
+  "application_process": "Apply through Fisheries Dept/implementing agency after taking credit and purchasing insurance; verification and sanction followed by grant of incentive",
+  "contact_helpline": [],
+  "contact_email": [],
+  "documentation_required": ["Proof of institutional credit", "Insurance premium receipt/policy", "Beneficiary identity", "Farm/aquaculture unit details"],
+  "source": [
+    "MyScheme.gov.in summary of PMMKSSY Component 1B",
+    "PIB release Apr 2 2025 (component 1B details)",
+    "Department of Fisheries site on PMMKSSY"
+  ],
+  "actual_website_link": "https://www.myscheme.gov.in/schemes/pmmkssy-1b"
+}
+]

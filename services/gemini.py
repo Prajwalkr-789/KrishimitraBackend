@@ -1,8 +1,8 @@
 # services/gemini.py
-import google.generativeai as genai
+import google.generativeai as genai # type: ignore
 import os
 from dotenv import load_dotenv
-from google.generativeai.types import HarmCategory, HarmBlockThreshold
+# from google.generativeai import HarmCategory, HarmBlockThreshold # type: ignore
 
 # Load environment variables
 load_dotenv()
@@ -12,7 +12,7 @@ genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 
 def get_gemini_response(prompt: str, temperature: float = 0.3) -> str:
     """Get response from Gemini with safety settings"""
-    model = genai.GenerativeModel('gemini-1.0-pro')
+    model = genai.GenerativeModel('gemini-2.5-flash')
     
     response = model.generate_content(
         prompt,
@@ -20,12 +20,12 @@ def get_gemini_response(prompt: str, temperature: float = 0.3) -> str:
             "temperature": temperature,
             "max_output_tokens": 4000,
         },
-        safety_settings={
-            HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
-            HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
-            HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
-            HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
-        },
+        # safety_settings={
+        #     HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+        #     HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+        #     HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+        #     HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+        # },
         stream=True
     )
     
