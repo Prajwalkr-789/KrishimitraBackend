@@ -141,7 +141,9 @@ def init_state():
         disease_info=None,
         llm_response=""
     )
-
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({"message": "Flask app is running on Render!"})
 
 @app.route("/ask", methods=["POST"])
 def ask():
