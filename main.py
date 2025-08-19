@@ -9,23 +9,25 @@ import uuid
 from agents.schemes import handle_user_query_schemes
 from agents.Market_Prices import fetch_market_prices_full
 from agents.bank_policies import handle_user_query_policies
+from agents.DiseaseDetection import handle_user_query_Disease_detector
 from flask_cors import CORS
+import tempfile
 import re
 # Create uploads directory if needed
 
 app = Flask(__name__)
-CORS(app , origins=["https://krishimitra-green.vercel.app"] ) 
+CORS(app , origins=["https://krishimitra-green.vercel.app","http://localhost:3000"] ) 
 
-# UPLOADS_DIR = "uploads"
-# os.makedirs(UPLOADS_DIR, exist_ok=True)
+UPLOADS_DIR = "uploads"
+os.makedirs(UPLOADS_DIR, exist_ok=True)
 
-# def save_uploaded_file(file_bytes, extension=".jpg"):
-#     """Save uploaded file to uploads directory"""
-#     filename = f"{uuid.uuid4()}{extension}"
-#     filepath = os.path.join(UPLOADS_DIR, filename)
-#     with open(filepath, "wb") as f:
-#         f.write(file_bytes)
-#     return filepath
+def save_uploaded_file(file_bytes, extension=".jpg"):
+    """Save uploaded file to uploads directory"""
+    filename = f"{uuid.uuid4()}{extension}"
+    filepath = os.path.join(UPLOADS_DIR, filename)
+    with open(filepath, "wb") as f:
+        f.write(file_bytes)
+    return filepath
 
 # def main():
     # print("=== KrishiMitra Agriculture Advisor ===")
@@ -141,9 +143,39 @@ def init_state():
         disease_info=None,
         llm_response=""
     )
+
+
 @app.route("/", methods=["GET"])
 def home():
     return jsonify({"message": "Flask app is running on Render!"})
+
+
+@app.route("/detect-disease", methods=["POST"])
+def detect_disease():
+    # Get query text
+    query = request.form.get("query")
+    # Get image file
+    image = request.files["image"]
+
+    # Save temporarily
+    # image_path = f"./{image.filename}"
+    # image.save(image_path)
+
+    # filename = secure_filename(image.filename)
+    # temp_dir = tempfile.mkdtemp()
+    # image_path = os.path.join(temp_dir, filename)
+    # image.save(image_path)
+
+    # Create model instance
+    state = init_state()
+    state["user_query"] = query
+    state["image_path"] = image_path
+    state["language"] = request.form.get("language", "english").lower()
+    try:
+        response = handle_user_query_Disease_detector(state["user_query"], state["image_path"], state["language"])
+        return jsonify({"result": response})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 @app.route("/ask", methods=["POST"])
 def ask():
@@ -171,16 +203,14 @@ def bank_policies():
 
     # Call your workflow or any processing function
     result = handle_user_query_policies(state["user_query"], state["language"])
-    if result.startswith("```json"):
-        result = result[7:]  # skip ```json
-    if result.endswith("```"):
-        result = result[:-3]
-    result = result.strip()
-
+    if isinstance(result, str):
+        result = result.strip()
+        result = result.replace("```json", "").replace("```", "").strip()
+        result = json.loads(result) 
     print("LLM Response:", result)
-    # result = re.sub(r'\n{2,}', '\n', result
+    # result = re.sub(r'\n{2,}', '\n', resul
 
-    return result
+    return jsonify(result)
 
 @app.route("/market_price", methods=["POST"])
 def market_price():
@@ -215,4 +245,4 @@ def text_query():
 
 if __name__ == "__main__":
     port = int(os.getenv("PORT", 5000))
-    app.run(host="0.0.0.0",port = port)
+    app.run(host="0.0.0.0",port = port)  # Set debug=True for development
