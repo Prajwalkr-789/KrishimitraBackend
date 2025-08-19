@@ -1,7 +1,6 @@
 # services/query_pipeline.py
 import json
 from services.gemini import get_gemini_response
-from services.chatgpt import get_chatgpt_response
 import time
 
 
