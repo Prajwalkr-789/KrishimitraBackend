@@ -5,17 +5,7 @@ def generate_response(user_query: str , image_path , language: str = "english") 
     """
     Generate a structured agricultural response using AI.
     """
-    prompt = f"""You are an expert agricultural crop disease detector. 
-Analyze the uploaded image and the user query: "{user_query}". 
-Return a JSON object with keys:
-- disease_name
-- symptoms
-- cause
-- recommended_treatment
-- preventive_measures
-- source_url (string|null)
-
-Respond only as a valid JSON object. Language: {language}"""
+    prompt = f"""You are an expert agricultural crop disease detector. Analyze the uploaded image and the user query: "{user_query}". Return a JSON object with keys: disease_name,symptoms,cause,recommended_treatment,preventive_measures,source_url (string|null). Respond only as a valid JSON object. Language: {language}"""
     final_response = get_gemini_response_cv(prompt , image_path=image_path)
     return final_response
 
